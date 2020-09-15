@@ -29,42 +29,35 @@ class sEMGData:
         self.dataframe = pd.DataFrame(self.array, columns=['RF','BF','VM','ST','FX'])
 
     def return_array(self):
-
         return self.array
 
     def return_df(self):
-
         return self.dataframe
 
     def return_output(self):
         return self.output
 
     def plot_RF(self):
-
         plt.plot(self.dataframe['RF'])
         plt.title('RF - rectus femoris')
         plt.show()
 
     def plot_BF(self):
-
         plt.plot(self.dataframe['BF'])
         plt.title('BF - biceps femoris')
         plt.show()
 
     def plot_VM(self):
-
         plt.plot(self.dataframe['VM'])
         plt.title('VM - vastus internus')
         plt.show()
 
     def plot_ST(self):
-
         plt.plot(self.dataframe['ST'])
         plt.title('ST - semitendinosus')
         plt.show()
 
     def plot_FX(self):
-
         plt.plot(self.dataframe['FX'])
         plt.title('FX - knee flexion ()')
         plt.show()
@@ -72,7 +65,6 @@ class sEMGData:
     def sEMG_plot(self):
 
         # Plot individual sEMG data
-
         plt.plot(self.dataframe['RF'])
         plt.title('RF - rectus femoris')
         plt.show()
@@ -96,7 +88,6 @@ class sEMGData:
 # Preprocessing Function
 
 def preprocess(folder):
-
     input_array = []
     classes = []
 

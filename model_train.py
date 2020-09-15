@@ -49,7 +49,7 @@ print(onehot_encoded)
 time_steps = input_array.shape[1]
 n_features = input_array.shape[2]
 
-# code for building an LSTM with 100 neurons and dropout.
+# LSTM with 100 neurons and dropout.
 
 model = Sequential()
 model.add(LSTM(100, return_sequences=False, input_shape=(time_steps, n_features)))
@@ -82,6 +82,5 @@ abnormal_onehot_encoded = onehot_encoder.fit_transform(integer_encoded)
 print(abnormal_onehot_encoded)
 
 # test on abnormal dataset
-
 score = model.evaluate(abnormal_input_array, abnormal_onehot_encoded, batch_size=16)
 print(score)
